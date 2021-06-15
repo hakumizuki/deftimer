@@ -60,6 +60,7 @@ Blockで処理を分割したり、処理に名前をつけたりできます。
 ```
 $ docker run --rm decotimer python -m unittest
 ```
+Note: It might fail depending on your pc spec.  
 
 # Author
 * Taichi Masuyama
