@@ -13,20 +13,20 @@ pip install pathlib
 # Try decotimer with docker
 ```
 $ cd <parent dir of decotimer>
-$ docker build -t decotimer python -m unittest.
-$ docker run --rm deco_usage
+$ docker build -t decotimer .
+$ docker run --rm decotimer
 ```
 
 # decotimer
-```
 (TBD)
 
 I'm always welcome for your ideas.
 Thanks for visiting my repo :)
 
 English:
-It allows you to calculate run time of each functions. See USAGE.md for more information -->
+It allows you to calculate run time of each functions. See USAGE.md for (more information)[https://github.com/hakumizuki/decotimer/blob/main/USAGE.md]
 
+```
 timer = Timer()
 @timer.use_timer
 def do_something():
