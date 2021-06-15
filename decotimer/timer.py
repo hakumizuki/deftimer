@@ -3,7 +3,6 @@ from inspect import getframeinfo, currentframe
 from contextlib import contextmanager
 from .exceptions import TimerError
 # TODO: linenoの使い方を考える
-# TODO: エラーチェックもろもろ
 # TODO: BlocksをSortして表示するオプション
 # TODO: block()をsleep()で誤差検査
 
@@ -98,7 +97,6 @@ class Timer:
         })
         self._paused = True
 
-
     def resume(self):
         if self._stopped:
             raise TimerError(_stopped, 'You cannot call resume() after calling stop()')
@@ -138,7 +136,8 @@ class Timer:
                 self.blocks[-1]['time'] = 'Skipped'
             else:
                 self.blocks[-1]['time'] = time.time() - block_start
-            self.blocks[-1]['line'] = self._get_lineno()
+            # TODO: self.blocks[-1]['line'] = self._get_lineno()
+            self.blocks[-1]['line'] = 'Coming soon...'
 
     ##############################
     # Timer Class Static methods #

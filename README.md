@@ -10,6 +10,13 @@ Python: 3.8
 pip install pathlib
 ```
 
+# Try decotimer with docker
+```
+$ cd <parent dir of decotimer>
+$ docker build -t deco_usage .
+$ docker run --rm deco_usage
+```
+
 # decotimer
 ```
 (TBD)
