@@ -7,7 +7,7 @@ ENV PYTHONBUFFERED 1
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 
-COPY /decotimer .
+COPY /decotimer ./decotimer/
 COPY usage.py .
 
 CMD [ "python", "usage.py" ]
