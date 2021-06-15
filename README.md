@@ -13,7 +13,7 @@ pip install pathlib
 # Try decotimer with docker
 ```
 $ cd <parent dir of decotimer>
-$ docker build -t deco_usage .
+$ docker build -t decotimer python -m unittest.
 $ docker run --rm deco_usage
 ```
 
@@ -52,6 +52,11 @@ def do_something():
 他にも、、、
 Blockで処理を分割したり、処理に名前をつけたりできます。
 今後ファイル化(JSON、CSV)も考えています。
+```
+
+# Test decotimer
+```
+$ docker run --rm decotimer python -m unittest
 ```
 
 # Author
