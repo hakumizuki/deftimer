@@ -114,10 +114,12 @@ class Timer:
         self._end = time.time()
 
     @contextmanager
-    def block(self, name=None, exclude=False):
+    def block(self, name=None, exclude=True):
         """block context manager
         @param name: str or None, Block name
-        @param exclude: bool, Determine if you exclude the process time from global timer or not
+        @param exclude: bool, Determine if you exclude the process 
+        time from global timer or not. So, if you set exclude=False, 
+        you can get the time of the block but it won't pause timer.
         @usage:
         with timer.block(name='email', exclude=True):
             email(to='example@example.com')
@@ -126,16 +128,16 @@ class Timer:
         self.blocks.append({
             'name': name,
             'line': None,
-            'time': None
+            'time': None,
+            'exclude': None
         })
         block_start = time.time()
         try:
             yield
         finally:
-            if exclude:
-                self.blocks[-1]['time'] = 'Skipped'
-            else:
-                self.blocks[-1]['time'] = time.time() - block_start
+            self.blocks[-1]['exclude'] = exclude
+            self.blocks[-1]['time'] = time.time() - block_start
+
             # TODO: self.blocks[-1]['line'] = self._get_lineno()
             self.blocks[-1]['line'] = 'Coming soon...'
 
@@ -170,16 +172,18 @@ class Timer:
     ###############################
     def _calculate_result(self):
         self._global_time = self._end - self._start
+
         for item in self.pause_resume:
             self._global_paused_time += item['resume'] - item['pause']
 
-        self._global_total += self._global_time
         for item in self.blocks:
-            if isinstance(item['time'], float): # exclude excluded -> 'Skipped'
-                self._global_total -= item['time']
+            if item['exclude']:
                 self._paused_blocked_total += item['time']
         
         self._paused_blocked_total += self._global_paused_time
+        # Main Result --> _global_total
+        self._global_total += self._global_time
+        self._global_total -= self._paused_blocked_total
 
     def _show_detail_result(self):
         """Show full info"""
@@ -188,7 +192,7 @@ class Timer:
         print(f'Result                --> {self._global_total} s')
         print(f'Whole program ran in  --> {self._global_time} s')
         print(f'Paused                --> {self._global_paused_time} s, {len(self.pause_resume)}times')
-        print(f'Blocks                --> {self.blocks}')
+        print(f'Blocks                --> {len(self.blocks)} blocks: {self.blocks}')
         print(f'Paused + Blocked      --> {self._paused_blocked_total} s')
         print('-----------------------------------------')
 
