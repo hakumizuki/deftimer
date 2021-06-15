@@ -8,6 +8,7 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 COPY /decotimer ./decotimer/
+COPY /tests ./tests/
 COPY usage.py .
 
 CMD [ "python", "usage.py" ]
