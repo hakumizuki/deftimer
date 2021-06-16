@@ -2,7 +2,7 @@
 
 # Usage / 使い方
 ```
-from decotimer.timer import Timer
+from deftimer.timer import Timer
 import time
 
 timer = Timer(user='Taichi Masuyama', description='Sample Usage')

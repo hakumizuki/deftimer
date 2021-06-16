@@ -5,7 +5,7 @@ Thanks for visiting my repo :)
 Taichi Masuyama <montanha.masu536@gmail.com>
 """
 
-from decotimer.timer import Timer
+from deftimer.timer import Timer
 import time
 
 timer = Timer(user='Taichi Masuyama', description='Sample Usage')

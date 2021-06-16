@@ -1,5 +1,5 @@
 # Alpha  
-Decotimer is now alpha stage.  
+Deftimer is now alpha stage.  
 Throw me issues!  
 
 # Environments
@@ -12,18 +12,18 @@ Python: >=3.6, <4
 pip install pathlib
 ```
 
-# Try decotimer with docker
+# Try deftimer with docker
 ```
-$ cd <parent dir of decotimer>
-$ docker build -t decotimer .
-$ docker run --rm decotimer
+$ cd <parent dir of deftimer>
+$ docker build -t deftimer .
+$ docker run --rm deftimer
 ```
 
-# decotimer
+# deftimer
 (TBD)  
 
 English:  
-It allows you to calculate run time of each functions. See USAGE.md for (more information)[https://github.com/hakumizuki/decotimer/blob/main/USAGE.md]  
+It allows you to calculate run time of each functions. See USAGE.md for (more information)[https://github.com/hakumizuki/deftimer/blob/main/USAGE.md]  
 
 ```
 timer = Timer()
@@ -55,9 +55,9 @@ def do_something():
 Blockで処理を分割したり、処理に名前をつけたりできます。  
 今後ファイル化(JSON、CSV)も考えています。  
 
-# Test decotimer
+# Test deftimer
 ```
-$ docker run --rm decotimer python -m unittest
+$ docker run --rm deftimer python -m unittest
 ```
 Note: It might fail depending on your pc spec.  
 
@@ -69,4 +69,4 @@ I always welcome your ideas!
 Thanks for visiting my repo :)  
 
 # License
-"decotimer" is under [MIT license](https://en.wikipedia.org/wiki/MIT_License)  
+"deftimer" is under [MIT license](https://en.wikipedia.org/wiki/MIT_License)  

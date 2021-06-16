@@ -7,7 +7,7 @@ ENV PYTHONBUFFERED 1
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 
-COPY /decotimer ./decotimer/
+COPY /deftimer ./deftimer/
 COPY /tests ./tests/
 COPY /dist ./dist/
 COPY usage.py .
