@@ -1,6 +1,6 @@
 import unittest
 import time
-from decotimer.timer import Timer
+from deftimer.timer import Timer
 
 class TestTimer(unittest.TestCase):
     def test_should_initialize_timer(self):
