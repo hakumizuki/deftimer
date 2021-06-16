@@ -22,7 +22,7 @@ $ docker run --rm deftimer
 # deftimer
 (TBD)  
 
-* quick start
+* quick start  
 It allows you to calculate run time of each functions. See USAGE.md for (more information)[https://github.com/hakumizuki/deftimer/blob/main/USAGE.md]  
 
 ```
@@ -35,7 +35,7 @@ do_something() # this prints the results
 ```
 
 ## document
-* ```Timer(user='', description='')```
+* ```Timer(user='', description='')```  
 Initialize a Timer instance first.  
 You will use the instance to decorate a function, use other methods.  
 ```
@@ -46,14 +46,14 @@ def something():
     ...
 ```
 
-* ```@timer.use_timer(detail=True)``` decorator
-```params```
+* ```@timer.use_timer(detail=True)``` decorator  
+```params```  
 detail:  It shows full results when detail is True.  
 
-```description```
+```description```  
 This decorator allows the function to be inspected by a timer instance.  
 
-* ```timer.pause() & timer.resume()```
+* ```timer.pause() & timer.resume()```  
 You will sandwitch a process to omit the process from timer counting.  
 The process time occured between pause&resume will not be counted as a result.  
 ```
@@ -65,8 +65,8 @@ def something():
 ```
 The result will be 0 sec.
 
-* ```timer.block(name=None, exclude=True)``` context manager
-```params```
+* ```timer.block(name=None, exclude=True)``` context manager  
+```params```  
 name:     You can name the block. The name will show up in results.  
 exclude:  You can choose whether or not you exclude the process time that took to run the block from results.  
 ```
@@ -76,7 +76,7 @@ def something():
         time.sleep(2)
 ```
 
-* ```timer.stop()```
+* ```timer.stop()```  
 Use this when you want to stop the timer.  
 ```
 @timer.use_timer
@@ -85,7 +85,7 @@ def something():
     # any process after stop() will be excluded from results.
 ```
 
-* Results
+* Results  
 (TBD)  
 
 Below is an example of full results.  
