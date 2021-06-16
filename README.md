@@ -20,8 +20,6 @@ $ docker run --rm deftimer
 ```
 
 # deftimer
-(TBD)  
-
 * quick start  
 It allows you to calculate run time of each functions. See USAGE.md for (more information)[https://github.com/hakumizuki/deftimer/blob/main/USAGE.md]  
 
@@ -47,11 +45,9 @@ def something():
 ```
 
 * ```@timer.use_timer(detail=True)``` decorator  
+This decorator allows the function to be inspected by a timer instance.  
 ```params```  
 detail:  It shows full results when detail is True.  
-
-```description```  
-This decorator allows the function to be inspected by a timer instance.  
 
 * ```timer.pause() & timer.resume()```  
 You will sandwitch a process to omit the process from timer counting.  
@@ -99,7 +95,7 @@ Paused + Blocked      --> 0 s
 -----------------------------------------
 ```
 
-* coming soon...
+* coming soon...  
 File exporting (JSON, CSV)  
 Average calculation  
 

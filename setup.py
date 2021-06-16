@@ -8,7 +8,7 @@ long_description = (here / 'README.md').read_text(encoding='utf-8')
 
 setup(
     name='deftimer',
-    version='0.0.1',
+    version='0.0.3',
     description='A very simple Python tool for process inspection and timer. (alpha)',
     long_description=long_description,
     long_description_content_type='text/markdown',
