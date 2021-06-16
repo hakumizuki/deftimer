@@ -1,5 +1,5 @@
 """Test Page
-I'm always welcome for your ideas.
+I always welcome your ideas.
 Thanks for visiting my repo :)
 
 Taichi Masuyama <montanha.masu536@gmail.com>

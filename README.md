@@ -1,8 +1,10 @@
-(TBD)  
+# Alpha  
+Decotimer is now alpha stage.  
+Throw me issues!  
 
 # Environments
 ```
-Python: 3.8
+Python: >=3.6, <4
 ```
 
 # Requirements
@@ -18,10 +20,7 @@ $ docker run --rm decotimer
 ```
 
 # decotimer
-(TBD)
-
-I'm always welcome for your ideas.  
-Thanks for visiting my repo :)  
+(TBD)  
 
 English:  
 It allows you to calculate run time of each functions. See USAGE.md for (more information)[https://github.com/hakumizuki/decotimer/blob/main/USAGE.md]  
@@ -65,6 +64,9 @@ Note: It might fail depending on your pc spec.
 # Author
 * Taichi Masuyama
 * montanha.masu536@gmail.com
+
+I always welcome your ideas!  
+Thanks for visiting my repo :)  
 
 # License
 "decotimer" is under [MIT license](https://en.wikipedia.org/wiki/MIT_License)  
