@@ -21,7 +21,7 @@ $ docker run --rm deftimer
 
 # deftimer
 * quick start  
-It allows you to calculate run time of each functions. See USAGE.md for (more information)[https://github.com/hakumizuki/deftimer/blob/main/USAGE.md]  
+It allows you to calculate run time of each functions. See USAGE.md for [more information](https://github.com/hakumizuki/deftimer/blob/main/USAGE.md)  
 
 ```
 timer = Timer()
@@ -115,4 +115,3 @@ Thanks for visiting my repo :)
 
 # License
 "deftimer" is under [MIT license](https://en.wikipedia.org/wiki/MIT_License)  
-
